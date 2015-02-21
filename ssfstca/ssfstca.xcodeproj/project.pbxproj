@@ -11,6 +11,7 @@
 		178D9ECF1C067DCF9E735D1B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502A419DB68AB9B8729B28C0 /* Foundation.framework */; };
 		29982A384E0DC4DF4BAC328A /* MBRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D54E94F5B34384A6476D1191 /* MBRAppDelegate.m */; };
 		41ED7E8499CA143AF74047B8 /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = 2826B1AAFEDD29B0094BB9C8 /* Main.storyboard */; };
+		6AFB6E311A986CDB007571A2 /* CoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB6E301A986CDB007571A2 /* CoreDataController.m */; };
 		8C25B06B04D5560A4663AC29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 910C2C579B9EF90B1F9A7A7A /* main.m */; };
 		C5985D1B0FDB4D13F63126FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1CA57319A3CFF3E5DA2972 /* Images.xcassets */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,8 @@
 		502A419DB68AB9B8729B28C0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		52CBB15EFB3C87258C2690D4 /* MBRCommonMetrics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBRCommonMetrics.m; sourceTree = "<group>"; };
 		5F79083774145BDD4D2E4DA8 /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
+		6AFB6E2F1A986CDB007571A2 /* CoreDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataController.h; sourceTree = "<group>"; };
+		6AFB6E301A986CDB007571A2 /* CoreDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataController.m; sourceTree = "<group>"; };
 		6D6B46FB8253C4129EED0F79 /* ssfstca-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ssfstca-Prefix.pch"; sourceTree = "<group>"; };
 		6FA41F605F8D39640FACB7E2 /* ssfstca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ssfstca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C5A66F506361D6A23AFBF16 /* MBRAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBRAppDelegate.h; sourceTree = "<group>"; };
@@ -101,18 +104,13 @@
 			path = DataSources;
 			sourceTree = "<group>";
 		};
-		3BC272D78E9AD62CFEAE0825 /* Nibs */ = {
+		3D0C7B6D2D633CCD24F0A520 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				6AFB6E2F1A986CDB007571A2 /* CoreDataController.h */,
+				6AFB6E301A986CDB007571A2 /* CoreDataController.m */,
 			);
-			path = Nibs;
-			sourceTree = "<group>";
-		};
-		3D0C7B6D2D633CCD24F0A520 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		48703EC7D96F6C65D237CE84 /* Products */ = {
@@ -137,21 +135,6 @@
 				E81017BE4B6F52811A546551 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		96A127B33E1AB6341FB02FA9 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		9EB195CB6CBE1BCD1C65CE69 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				2826B1AAFEDD29B0094BB9C8 /* Main.storyboard */,
-			);
-			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		A4A28A7DD5E871892191D58A = {
@@ -184,29 +167,18 @@
 			path = "Other-Sources";
 			sourceTree = "<group>";
 		};
-		C1B6ADDA30EDDFA509A47677 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		C23E94B1C5D6D93D04FB2266 /* ssfstca */ = {
 			isa = PBXGroup;
 			children = (
 				EA38D64CCDBF1D537832C60C /* Categories */,
-				96A127B33E1AB6341FB02FA9 /* Classes */,
-				C1B6ADDA30EDDFA509A47677 /* Controllers */,
 				33F598D080A39C388A63CF1C /* DataSources */,
 				004316FC8D405CE0BBFE0585 /* Delegates */,
-				3D0C7B6D2D633CCD24F0A520 /* Models */,
+				3D0C7B6D2D633CCD24F0A520 /* CoreData */,
 				F7A7B2B7DA9885AA6D9CFB3C /* ViewControllers */,
 				2CC5E80259D8A97CBA902BF4 /* Views */,
 				CECC463EA4F3A81B64DC441E /* Constants */,
 				32262AFA990884201ED01D21 /* Resources */,
 				2D1CA57319A3CFF3E5DA2972 /* Images.xcassets */,
-				9EB195CB6CBE1BCD1C65CE69 /* Storyboards */,
-				3BC272D78E9AD62CFEAE0825 /* Nibs */,
 				B1D6044A7E0483A7712DE21C /* Other-Sources */,
 			);
 			path = ssfstca;
@@ -248,6 +220,7 @@
 		F7A7B2B7DA9885AA6D9CFB3C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2826B1AAFEDD29B0094BB9C8 /* Main.storyboard */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -369,6 +342,7 @@
 				29982A384E0DC4DF4BAC328A /* MBRAppDelegate.m in Sources */,
 				09457E217D8349EC8ED0BF2B /* MBRCommonMetrics.m in Sources */,
 				41ED7E8499CA143AF74047B8 /* Main.storyboard in Sources */,
+				6AFB6E311A986CDB007571A2 /* CoreDataController.m in Sources */,
 				8C25B06B04D5560A4663AC29 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

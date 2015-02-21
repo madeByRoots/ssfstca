@@ -3,9 +3,13 @@ platform :ios, '8.0'
 source 'https://github.com/CocoaPods/Specs.git'
 
 # Networking
-# pod 'AFNetworking'
+ pod 'AFNetworking'
 
-# Distribution
-# pod 'HockeySDK'
+
+# Property Mapping
+pod 'KZPropertyMapper'
+
+# Auto Layout
+pod 'Masonry'
 
 # Testing
