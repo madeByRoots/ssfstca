@@ -71,7 +71,7 @@
 
 - (void)updateFromDictionary:(NSDictionary *)dictionary
 {
-    assert(@"override!");
+    NSAssert(NO, @"Should be implemented by subclasses");
 }
 
 @end

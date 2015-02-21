@@ -42,7 +42,7 @@
 + (NSArray *)defaultSortDescriptors
 {
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]
-                                        initWithKey: @"name" ascending: YES];
+                                        initWithKey: @"identifier" ascending: YES];
     
     return @[sortDescriptor];
 }
