@@ -20,6 +20,8 @@
 		6AFB6E431A989349007571A2 /* CocktailObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB6E421A989349007571A2 /* CocktailObject.m */; };
 		6AFB6E461A989409007571A2 /* CocktailManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB6E451A989409007571A2 /* CocktailManagedObject.m */; };
 		6AFB6E4C1A989EE3007571A2 /* KZPropertyMapper+Additons.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB6E4B1A989EE3007571A2 /* KZPropertyMapper+Additons.m */; };
+		6AFB6E4F1A98B74E007571A2 /* TableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB6E4E1A98B74E007571A2 /* TableDataSource.m */; };
+		6AFB6E521A98B80B007571A2 /* CocktailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB6E511A98B80B007571A2 /* CocktailsTableViewController.m */; };
 		8C25B06B04D5560A4663AC29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 910C2C579B9EF90B1F9A7A7A /* main.m */; };
 		C5985D1B0FDB4D13F63126FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1CA57319A3CFF3E5DA2972 /* Images.xcassets */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,10 @@
 		6AFB6E491A9898D2007571A2 /* ParsableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParsableModel.h; path = ssfstca/Protocol/ParsableModel.h; sourceTree = SOURCE_ROOT; };
 		6AFB6E4A1A989EE3007571A2 /* KZPropertyMapper+Additons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KZPropertyMapper+Additons.h"; sourceTree = "<group>"; };
 		6AFB6E4B1A989EE3007571A2 /* KZPropertyMapper+Additons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KZPropertyMapper+Additons.m"; sourceTree = "<group>"; };
+		6AFB6E4D1A98B74E007571A2 /* TableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableDataSource.h; sourceTree = "<group>"; };
+		6AFB6E4E1A98B74E007571A2 /* TableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableDataSource.m; sourceTree = "<group>"; };
+		6AFB6E501A98B80B007571A2 /* CocktailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocktailsTableViewController.h; sourceTree = "<group>"; };
+		6AFB6E511A98B80B007571A2 /* CocktailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocktailsTableViewController.m; sourceTree = "<group>"; };
 		6D6B46FB8253C4129EED0F79 /* ssfstca-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ssfstca-Prefix.pch"; sourceTree = "<group>"; };
 		6F55BAD49C7564DEB2B91D5D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6FA41F605F8D39640FACB7E2 /* ssfstca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ssfstca.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +131,8 @@
 		33F598D080A39C388A63CF1C /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				6AFB6E4D1A98B74E007571A2 /* TableDataSource.h */,
+				6AFB6E4E1A98B74E007571A2 /* TableDataSource.m */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -295,6 +303,8 @@
 			isa = PBXGroup;
 			children = (
 				2826B1AAFEDD29B0094BB9C8 /* Main.storyboard */,
+				6AFB6E501A98B80B007571A2 /* CocktailsTableViewController.h */,
+				6AFB6E511A98B80B007571A2 /* CocktailsTableViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -447,7 +457,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				29982A384E0DC4DF4BAC328A /* AppDelegate.m in Sources */,
+				6AFB6E521A98B80B007571A2 /* CocktailsTableViewController.m in Sources */,
 				09457E217D8349EC8ED0BF2B /* MBRCommonMetrics.m in Sources */,
+				6AFB6E4F1A98B74E007571A2 /* TableDataSource.m in Sources */,
 				6AFB6E461A989409007571A2 /* CocktailManagedObject.m in Sources */,
 				6AFB6E4C1A989EE3007571A2 /* KZPropertyMapper+Additons.m in Sources */,
 				41ED7E8499CA143AF74047B8 /* Main.storyboard in Sources */,
