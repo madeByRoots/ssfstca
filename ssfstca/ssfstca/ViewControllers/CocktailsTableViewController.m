@@ -8,10 +8,15 @@
 #import "CocktailDataSource.h"
 #import "CocktailCell.h"
 
+#import "ManagedCocktailDataSource.h"
+#import "CocktailManagedObject.h"
+
 @class CocktailObject;
 
 @interface CocktailsTableViewController()
 @property (nonatomic, strong) TableDataSource *dataSource;
+@property (nonatomic, strong) ManagedCocktailDataSource *managedDataSource;
+
 @property (nonatomic, assign) BOOL toggleFlag;
 @end
 
@@ -24,7 +29,9 @@
 {
     [super viewDidLoad];
     
-    self.dataSource = [self configureDataSource];
+    //self.dataSource = [self configureDataSource];
+    
+    self.managedDataSource = [self configureManagedDataSource];
 }
 
 
@@ -41,6 +48,20 @@
                                                                  
                                                                  [cocktailCell configureWithDataObject:cocktailObj];
                                                              }];
+    return dataSource;
+}
+
+
+- (ManagedCocktailDataSource *)configureManagedDataSource
+{
+    ManagedCocktailDataSource *dataSource = [[ManagedCocktailDataSource alloc] initWithTableView:self.tableView
+                                                                            cellIdentifier:[CocktailCell reuseIdentifier]
+                                                                        configureCellBlock:^(id cell, id item) {
+        
+                                                                            }];
+    
+    self.managedDataSource.fetchRequest = [CocktailManagedObject defaultFetchRequest];
+    
     return dataSource;
 }
 

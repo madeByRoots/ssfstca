@@ -6,14 +6,14 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^RSMTableViewCellConfigureBlock)(id cell, id item);
+typedef void (^TableViewCellConfigureBlock)(id cell, id item);
 
 @interface TableDataSource : NSObject <UITableViewDataSource>
 @property (weak, nonatomic, readonly) UITableView *tableView;
 
 - (instancetype)initWithTableView:(UITableView *)tableView
                              cellIdentifier:(NSString *)cellIdentifier
-                    configureCellBlock:(RSMTableViewCellConfigureBlock)configureCellBlock;
+                    configureCellBlock:(TableViewCellConfigureBlock)configureCellBlock;
 
 
 - (void)loadContent;

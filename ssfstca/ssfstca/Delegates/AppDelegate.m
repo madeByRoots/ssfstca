@@ -5,7 +5,15 @@
 //
 
 #import "AppDelegate.h"
-
+#import "CoreDataController.h"
 @implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [[CoreDataController sharedInstance] setup];
+    
+    
+    return YES;
+}
 
 @end

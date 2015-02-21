@@ -8,7 +8,7 @@
 
 @interface TableDataSource()
 @property (copy, nonatomic) NSString *cellIdentifier;
-@property (copy, nonatomic) RSMTableViewCellConfigureBlock configureCellBlock;
+@property (copy, nonatomic) TableViewCellConfigureBlock configureCellBlock;
 @property (weak, nonatomic) UITableView *tableView;
 @end
 
@@ -18,7 +18,7 @@
 
 - (instancetype)initWithTableView:(UITableView *)tableView
                    cellIdentifier:(NSString *)cellIdentifier
-               configureCellBlock:(RSMTableViewCellConfigureBlock)configureCellBlock
+               configureCellBlock:(TableViewCellConfigureBlock)configureCellBlock
 {
     NSParameterAssert(cellIdentifier);
     

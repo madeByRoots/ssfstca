@@ -23,6 +23,8 @@
 		6AFB6E521A98B80B007571A2 /* CocktailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB6E511A98B80B007571A2 /* CocktailsTableViewController.m */; };
 		6AFB6E561A98C158007571A2 /* CocktailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB6E551A98C158007571A2 /* CocktailCell.m */; };
 		6AFB6E591A98C527007571A2 /* CocktailDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB6E581A98C527007571A2 /* CocktailDataSource.m */; };
+		6AFB6E5C1A98E3B8007571A2 /* ManagedTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB6E5B1A98E3B8007571A2 /* ManagedTableDataSource.m */; };
+		6AFB6E5F1A98F37D007571A2 /* ManagedCocktailDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB6E5E1A98F37D007571A2 /* ManagedCocktailDataSource.m */; };
 		8C25B06B04D5560A4663AC29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 910C2C579B9EF90B1F9A7A7A /* main.m */; };
 		C5985D1B0FDB4D13F63126FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1CA57319A3CFF3E5DA2972 /* Images.xcassets */; };
 /* End PBXBuildFile section */
@@ -66,6 +68,10 @@
 		6AFB6E551A98C158007571A2 /* CocktailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocktailCell.m; sourceTree = "<group>"; };
 		6AFB6E571A98C527007571A2 /* CocktailDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocktailDataSource.h; sourceTree = "<group>"; };
 		6AFB6E581A98C527007571A2 /* CocktailDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocktailDataSource.m; sourceTree = "<group>"; };
+		6AFB6E5A1A98E3B8007571A2 /* ManagedTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagedTableDataSource.h; sourceTree = "<group>"; };
+		6AFB6E5B1A98E3B8007571A2 /* ManagedTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagedTableDataSource.m; sourceTree = "<group>"; };
+		6AFB6E5D1A98F37D007571A2 /* ManagedCocktailDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagedCocktailDataSource.h; sourceTree = "<group>"; };
+		6AFB6E5E1A98F37D007571A2 /* ManagedCocktailDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagedCocktailDataSource.m; sourceTree = "<group>"; };
 		6D6B46FB8253C4129EED0F79 /* ssfstca-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ssfstca-Prefix.pch"; sourceTree = "<group>"; };
 		6F55BAD49C7564DEB2B91D5D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6FA41F605F8D39640FACB7E2 /* ssfstca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ssfstca.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +145,10 @@
 				6AFB6E4E1A98B74E007571A2 /* TableDataSource.m */,
 				6AFB6E571A98C527007571A2 /* CocktailDataSource.h */,
 				6AFB6E581A98C527007571A2 /* CocktailDataSource.m */,
+				6AFB6E5A1A98E3B8007571A2 /* ManagedTableDataSource.h */,
+				6AFB6E5B1A98E3B8007571A2 /* ManagedTableDataSource.m */,
+				6AFB6E5D1A98F37D007571A2 /* ManagedCocktailDataSource.h */,
+				6AFB6E5E1A98F37D007571A2 /* ManagedCocktailDataSource.m */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -477,10 +487,12 @@
 				6AFB6E461A989409007571A2 /* CocktailManagedObject.m in Sources */,
 				6AFB6E4C1A989EE3007571A2 /* KZPropertyMapper+Additons.m in Sources */,
 				41ED7E8499CA143AF74047B8 /* Main.storyboard in Sources */,
+				6AFB6E5F1A98F37D007571A2 /* ManagedCocktailDataSource.m in Sources */,
 				6AFB6E3D1A988A72007571A2 /* ObjectModel.m in Sources */,
 				6AFB6E401A988A99007571A2 /* ManagedObjectModel.m in Sources */,
 				6AFB6E311A986CDB007571A2 /* CoreDataController.m in Sources */,
 				6AFB6E341A98762D007571A2 /* coreDataModel.xcdatamodeld in Sources */,
+				6AFB6E5C1A98E3B8007571A2 /* ManagedTableDataSource.m in Sources */,
 				6AFB6E431A989349007571A2 /* CocktailObject.m in Sources */,
 				8C25B06B04D5560A4663AC29 /* main.m in Sources */,
 			);
