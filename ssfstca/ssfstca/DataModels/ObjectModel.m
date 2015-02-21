@@ -6,9 +6,12 @@
 
 #import "ObjectModel.h"
 
+
 @implementation ObjectModel
 
-+ (NSArray *)createModelsFromConfigurationAtPath:(NSString *)resourcePath
+#pragma mark - Class Methods
+
++ (NSArray *)createModelsFromPlistConfigurationAtPath:(NSString *)resourcePath
 {
     NSParameterAssert(resourcePath);
     
@@ -32,7 +35,7 @@
         }
         
         ObjectModel *model = [[self alloc] init];
-        [model updateWithDictionary:configuration];
+        [model updateFromDictionary:configuration];
         
         [models addObject:model];
     }
@@ -41,15 +44,34 @@
 }
 
 
-- (void)updateWithDictionary:(NSDictionary *)dictionary
++ (NSArray *)createModelsFromJsonFile:(NSString *)fileName
 {
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    NSString *resourcePath = [bundle pathForResource:fileName ofType:@"json"];
     
+    NSData *jsonData = [NSData dataWithContentsOfFile:resourcePath];
+    
+    NSError *error;
+    
+    NSMutableArray *array = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
+    if (error)
+        NSLog(@"JSONObjectWithData error: %@", error);
+    
+    return [array copy];
 }
 
 
 + (NSArray *)defaultSortDescriptors
 {
     return nil;
+}
+
+
+#pragma mark - protocols
+
+- (void)updateFromDictionary:(NSDictionary *)dictionary
+{
+    assert(@"override!");
 }
 
 @end

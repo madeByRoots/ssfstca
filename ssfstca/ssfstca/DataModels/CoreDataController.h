@@ -16,7 +16,6 @@ typedef void (^CoreDataControllerBlock)(NSManagedObjectContext *context);
 
 @property (nonatomic, strong, readonly) NSManagedObjectContext *mainContext;
 
-
 + (instancetype)sharedInstance;
 
 - (void)setup;

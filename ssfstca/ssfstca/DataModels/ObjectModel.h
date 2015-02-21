@@ -4,13 +4,13 @@
 //  Copyright (c) 2015 madeByRoots. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "ParsableModel.h"
 
-@interface ObjectModel : NSObject
+@interface ObjectModel : NSObject <ParsableModel>
 
-+ (NSArray *)createModelsFromConfigurationAtPath:(NSString *)resourcePath;
++ (NSArray *)createModelsFromPlistConfigurationAtPath:(NSString *)resourcePath;
 
-- (void)updateWithDictionary:(NSDictionary *)dictionary;
++ (NSArray *)createModelsFromJsonFile:(NSString *)fileName;
 
 + (NSArray *)defaultSortDescriptors;
 
