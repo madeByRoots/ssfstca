@@ -1,10 +1,10 @@
 //
-//  MBRAppDelegate.h
+//  AppDelegate.h
 //  ssfstca
 //  Copyright (c) 2015 madeByRoots. All rights reserved.
 //
 
-@interface MBRAppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

@@ -1,11 +1,11 @@
 //
-//  MBRAppDelegate.m
+//  AppDelegate.m
 //  ssfstca
 //  Copyright (c) 2015 madeByRoots. All rights reserved.
 //
 
-#import "MBRAppDelegate.h"
+#import "AppDelegate.h"
 
-@implementation MBRAppDelegate
+@implementation AppDelegate
 
 @end
