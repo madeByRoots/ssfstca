@@ -2,30 +2,65 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8l2-RF-ytn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Cocktail List-->
         <scene sceneID="Hu3-13-ewU">
             <objects>
-                <tableViewController id="bD9-Ty-vBU" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4Pl-Wa-eSj">
+                <tableViewController id="bD9-Ty-vBU" customClass="CocktailsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="22" sectionFooterHeight="22" id="4Pl-Wa-eSj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dr7-Nx-40W">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CocktailCellIdentifier" rowHeight="66" id="dr7-Nx-40W" customClass="CocktailCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dr7-Nx-40W" id="pWI-bA-n6b">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cH0-Gx-dRD" userLabel="name">
+                                            <rect key="frame" x="23" y="24.5" width="38" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="identifier" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRG-xA-U2B">
+                                            <rect key="frame" x="525" y="8" width="52" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="cH0-Gx-dRD" secondAttribute="bottom" constant="15" id="Cbh-7b-Xkq"/>
+                                        <constraint firstItem="cH0-Gx-dRD" firstAttribute="leading" secondItem="pWI-bA-n6b" secondAttribute="leadingMargin" constant="15" id="De2-u9-Thv"/>
+                                        <constraint firstItem="TRG-xA-U2B" firstAttribute="top" secondItem="pWI-bA-n6b" secondAttribute="topMargin" id="H3q-Wb-Pdg"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="TRG-xA-U2B" secondAttribute="trailing" constant="15" id="lIA-Je-yNw"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="identifier" destination="TRG-xA-U2B" id="jTb-Ao-XEA"/>
+                                    <outlet property="nameLabel" destination="cH0-Gx-dRD" id="Hg3-Xs-8lm"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="bD9-Ty-vBU" id="ngR-UF-bP0"/>
                             <outlet property="delegate" destination="bD9-Ty-vBU" id="Co6-w8-0m9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Cocktail List" id="hHo-2H-oDF"/>
+                    <navigationItem key="navigationItem" title="Cocktail List" id="hHo-2H-oDF">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="FFZ-Py-U6s">
+                            <connections>
+                                <action selector="loadCocktails:" destination="bD9-Ty-vBU" id="Ymq-Bx-879"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="HT9-RJ-xVO">
+                            <connections>
+                                <action selector="toggleFilter:" destination="bD9-Ty-vBU" id="uII-Af-MDf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2HB-rX-gvY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
