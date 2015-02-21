@@ -12,6 +12,12 @@
 		29982A384E0DC4DF4BAC328A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D54E94F5B34384A6476D1191 /* AppDelegate.m */; };
 		41ED7E8499CA143AF74047B8 /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = 2826B1AAFEDD29B0094BB9C8 /* Main.storyboard */; };
 		6AFB6E311A986CDB007571A2 /* CoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB6E301A986CDB007571A2 /* CoreDataController.m */; };
+		6AFB6E341A98762D007571A2 /* coreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB6E321A98762D007571A2 /* coreDataModel.xcdatamodeld */; };
+		6AFB6E361A98882A007571A2 /* fullcocktail.json in Resources */ = {isa = PBXBuildFile; fileRef = 6AFB6E351A98882A007571A2 /* fullcocktail.json */; };
+		6AFB6E3D1A988A72007571A2 /* ObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB6E3C1A988A72007571A2 /* ObjectModel.m */; };
+		6AFB6E401A988A99007571A2 /* ManagedObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB6E3F1A988A99007571A2 /* ManagedObjectModel.m */; };
+		6AFB6E431A989349007571A2 /* CocktailObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB6E421A989349007571A2 /* CocktailObject.m */; };
+		6AFB6E461A989409007571A2 /* CocktailManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB6E451A989409007571A2 /* CocktailManagedObject.m */; };
 		8C25B06B04D5560A4663AC29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 910C2C579B9EF90B1F9A7A7A /* main.m */; };
 		C5985D1B0FDB4D13F63126FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1CA57319A3CFF3E5DA2972 /* Images.xcassets */; };
 /* End PBXBuildFile section */
@@ -35,6 +41,16 @@
 		5F79083774145BDD4D2E4DA8 /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		6AFB6E2F1A986CDB007571A2 /* CoreDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataController.h; sourceTree = "<group>"; };
 		6AFB6E301A986CDB007571A2 /* CoreDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataController.m; sourceTree = "<group>"; };
+		6AFB6E331A98762D007571A2 /* coreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = coreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		6AFB6E351A98882A007571A2 /* fullcocktail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fullcocktail.json; sourceTree = "<group>"; };
+		6AFB6E3B1A988A72007571A2 /* ObjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectModel.h; sourceTree = "<group>"; };
+		6AFB6E3C1A988A72007571A2 /* ObjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectModel.m; sourceTree = "<group>"; };
+		6AFB6E3E1A988A99007571A2 /* ManagedObjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagedObjectModel.h; sourceTree = "<group>"; };
+		6AFB6E3F1A988A99007571A2 /* ManagedObjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagedObjectModel.m; sourceTree = "<group>"; };
+		6AFB6E411A989349007571A2 /* CocktailObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocktailObject.h; sourceTree = "<group>"; };
+		6AFB6E421A989349007571A2 /* CocktailObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocktailObject.m; sourceTree = "<group>"; };
+		6AFB6E441A989409007571A2 /* CocktailManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocktailManagedObject.h; sourceTree = "<group>"; };
+		6AFB6E451A989409007571A2 /* CocktailManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocktailManagedObject.m; sourceTree = "<group>"; };
 		6D6B46FB8253C4129EED0F79 /* ssfstca-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ssfstca-Prefix.pch"; sourceTree = "<group>"; };
 		6FA41F605F8D39640FACB7E2 /* ssfstca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ssfstca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C5A66F506361D6A23AFBF16 /* AppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -104,13 +120,18 @@
 			path = DataSources;
 			sourceTree = "<group>";
 		};
-		3D0C7B6D2D633CCD24F0A520 /* CoreData */ = {
+		3D0C7B6D2D633CCD24F0A520 /* DataModels */ = {
 			isa = PBXGroup;
 			children = (
+				6AFB6E3B1A988A72007571A2 /* ObjectModel.h */,
+				6AFB6E3C1A988A72007571A2 /* ObjectModel.m */,
+				6AFB6E3E1A988A99007571A2 /* ManagedObjectModel.h */,
+				6AFB6E3F1A988A99007571A2 /* ManagedObjectModel.m */,
 				6AFB6E2F1A986CDB007571A2 /* CoreDataController.h */,
 				6AFB6E301A986CDB007571A2 /* CoreDataController.m */,
+				6AFB6E321A98762D007571A2 /* coreDataModel.xcdatamodeld */,
 			);
-			path = CoreData;
+			path = DataModels;
 			sourceTree = "<group>";
 		};
 		48703EC7D96F6C65D237CE84 /* Products */ = {
@@ -127,6 +148,27 @@
 			children = (
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		6AFB6E371A988841007571A2 /* DataObjects */ = {
+			isa = PBXGroup;
+			children = (
+				6AFB6E441A989409007571A2 /* CocktailManagedObject.h */,
+				6AFB6E451A989409007571A2 /* CocktailManagedObject.m */,
+				6AFB6E411A989349007571A2 /* CocktailObject.h */,
+				6AFB6E421A989349007571A2 /* CocktailObject.m */,
+			);
+			path = DataObjects;
+			sourceTree = "<group>";
+		};
+		6AFB6E471A98959A007571A2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3D0C7B6D2D633CCD24F0A520 /* DataModels */,
+				6AFB6E371A988841007571A2 /* DataObjects */,
+				33F598D080A39C388A63CF1C /* DataSources */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		7720D8F9339082B76713A30C /* Frameworks */ = {
@@ -160,6 +202,7 @@
 		B1D6044A7E0483A7712DE21C /* Other-Sources */ = {
 			isa = PBXGroup;
 			children = (
+				6AFB6E351A98882A007571A2 /* fullcocktail.json */,
 				DAA13F53480696B718DE4179 /* Info.plist */,
 				6D6B46FB8253C4129EED0F79 /* ssfstca-Prefix.pch */,
 				910C2C579B9EF90B1F9A7A7A /* main.m */,
@@ -171,9 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				EA38D64CCDBF1D537832C60C /* Categories */,
-				33F598D080A39C388A63CF1C /* DataSources */,
+				6AFB6E471A98959A007571A2 /* Data */,
 				004316FC8D405CE0BBFE0585 /* Delegates */,
-				3D0C7B6D2D633CCD24F0A520 /* CoreData */,
 				F7A7B2B7DA9885AA6D9CFB3C /* ViewControllers */,
 				2CC5E80259D8A97CBA902BF4 /* Views */,
 				CECC463EA4F3A81B64DC441E /* Constants */,
@@ -297,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AFB6E361A98882A007571A2 /* fullcocktail.json in Resources */,
 				C5985D1B0FDB4D13F63126FF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,8 +384,13 @@
 			files = (
 				29982A384E0DC4DF4BAC328A /* AppDelegate.m in Sources */,
 				09457E217D8349EC8ED0BF2B /* MBRCommonMetrics.m in Sources */,
+				6AFB6E461A989409007571A2 /* CocktailManagedObject.m in Sources */,
 				41ED7E8499CA143AF74047B8 /* Main.storyboard in Sources */,
+				6AFB6E3D1A988A72007571A2 /* ObjectModel.m in Sources */,
+				6AFB6E401A988A99007571A2 /* ManagedObjectModel.m in Sources */,
 				6AFB6E311A986CDB007571A2 /* CoreDataController.m in Sources */,
+				6AFB6E341A98762D007571A2 /* coreDataModel.xcdatamodeld in Sources */,
+				6AFB6E431A989349007571A2 /* CocktailObject.m in Sources */,
 				8C25B06B04D5560A4663AC29 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,6 +627,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6AFB6E321A98762D007571A2 /* coreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6AFB6E331A98762D007571A2 /* coreDataModel.xcdatamodel */,
+			);
+			currentVersion = 6AFB6E331A98762D007571A2 /* coreDataModel.xcdatamodel */;
+			path = coreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C5B6260B1DF2AF22EA42F664 /* Project object */;
 }

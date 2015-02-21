@@ -8,9 +8,9 @@
 #import "CoreDataController.h"
 
 
-static NSString * const ManagedObjectModelResourceName = @"CoreDataRossmann";
+static NSString * const ManagedObjectModelResourceName = @"coreDataModel";
 static NSString * const ManagedObjectModelExtension = @"momd";
-static NSString * const PersistenStorePath = @"rossmann.sqlite";
+static NSString * const PersistenStorePath = @"coredata.sqlite";
 
 
 @interface CoreDataController()
