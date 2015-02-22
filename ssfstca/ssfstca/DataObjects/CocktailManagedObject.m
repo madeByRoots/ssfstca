@@ -27,7 +27,7 @@
     NSDictionary *cocktailsAttributes = [dictionary objectForKey:@"@attributes"];
     
     [KZPropertyMapper mapValuesFrom:cocktailsAttributes
-                         toInstance:self usingMapping:@{@"id" :  KZBox(UIntFromString, identifier),
+                         toInstance:self usingMapping:@{@"id" :   KZBox(UIntFromString, identifier),
                                                         @"name" : KZProperty(name),
                                                         @"insertDate" :  KZBox(ModelObjectDate, creationDate),
                                                         @"updateDate" : KZBox(ModelObjectDate, creationDate)
@@ -40,7 +40,7 @@
 {
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:[self entityName]];
     
-    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
+    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"identifier" ascending:YES]];
     fetchRequest.fetchBatchSize = 20;
     return fetchRequest;
 }

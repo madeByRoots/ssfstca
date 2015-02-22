@@ -57,11 +57,15 @@
     ManagedCocktailDataSource *dataSource = [[ManagedCocktailDataSource alloc] initWithTableView:self.tableView
                                                                             cellIdentifier:[CocktailCell reuseIdentifier]
                                                                         configureCellBlock:^(id cell, id item) {
-        
+                                                                            
+                                                                                CocktailCell *cocktailCell = (CocktailCell *)cell;
+                                                                                CocktailObject *cocktailObj = (CocktailObject *)item;
+                                                                            
+                                                                                [cocktailCell configureWithDataObject:cocktailObj];
                                                                             }];
     
-    self.managedDataSource.fetchRequest = [CocktailManagedObject defaultFetchRequest];
-    
+    dataSource.fetchRequest = [CocktailManagedObject defaultFetchRequest];
+
     return dataSource;
 }
 
@@ -70,7 +74,7 @@
 
 - (IBAction)loadCocktails:(id)sender
 {
-    [self.dataSource loadContent];
+    [self.managedDataSource loadContent];
 }
 
 
@@ -78,12 +82,14 @@
 {
     self.toggleFlag = !self.toggleFlag;
 
-    CocktailDataSource *cocktailSource;
-    if ([self.dataSource isKindOfClass:[CocktailDataSource class]]) {
-        cocktailSource = (CocktailDataSource *)self.dataSource;
-    }
+//    CocktailDataSource *cocktailSource;
+//    if ([self.dataSource isKindOfClass:[CocktailDataSource class]]) {
+//        cocktailSource = (CocktailDataSource *)self.dataSource;
+//    }
+//    
+//    [cocktailSource sortByNameAscending:self.toggleFlag];
     
-    [cocktailSource sortByNameAscending:self.toggleFlag];
+    [self.managedDataSource sortByNameAscending:self.toggleFlag];
 }
 
 @end

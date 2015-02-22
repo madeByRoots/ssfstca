@@ -26,6 +26,8 @@
         return nil;
     }
     
+    _cellIdentifier = [cellIdentifier copy];
+    _configureCellBlock = [configureCellBlock copy];
     _tableView = tableView;
     _tableView.dataSource = self;
     
@@ -68,6 +70,13 @@
     
     fetchedResultsController.delegate = self;
     [fetchedResultsController performFetch:nil];
+}
+
+
+#pragma mark - public methods
+- (void)loadContent
+{
+    NSAssert(NO, @"Should be implemented by subclasses");
 }
 
 

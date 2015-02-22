@@ -15,4 +15,9 @@ typedef void (^TableViewCellConfigureBlock)(id cell, id item);
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, assign, getter=isPaused) BOOL paused;
 
+
+#pragma mark - public methods
+
+- (void)loadContent;
+
 @end
