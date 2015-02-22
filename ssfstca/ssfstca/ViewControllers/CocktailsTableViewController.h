@@ -6,6 +6,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CocktailsTableViewController : UITableViewController
+@interface CocktailsTableViewController : UITableViewController <UITableViewDelegate>
 
 @end

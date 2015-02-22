@@ -1,0 +1,17 @@
+- (ManagedCocktailDataSource *)configureManagedDataSource
+{
+ManagedCocktailDataSource *dataSource = [[ManagedCocktailDataSource alloc] initWithTableView:self.tableView
+cellIdentifier:[CocktailCell reuseIdentifier]
+configureCellBlock:^(id cell, id item) {
+
+CocktailCell *cocktailCell = (CocktailCell *)cell;
+CocktailObject *cocktailObj = (CocktailObject *)item;
+
+[cocktailCell configureWithDataObject:cocktailObj];
+}];
+
+dataSource.fetchRequest = [CocktailManagedObject defaultFetchRequest];
+
+return dataSource;
+}
+
